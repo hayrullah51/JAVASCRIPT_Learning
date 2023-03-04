@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            --colorDark : rgb(62, 62, 62);
+            --colorLight : rgb(148, 143, 143);
+        }
+        button{
+background-color: var(--colorDark);
+color: var(--colorLight);
+        }
+
+        body.dark{
+            background-color: rgb(62, 62, 62);
+            color: rgb(148, 143, 143);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="setMode()">Dark</button>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maxime dolorum? Dolor quis earum eius eos tenetur culpa iure quas qui sapiente possimus, eligendi saepe sint exercitationem, obcaecati quasi quo.</p>
+
+       <script>
+        function setMode(){
+                document.querySelector("body").classList.add("dark");
+        }
+        </script>
+</body>
+</html>
