@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<h1>TEST</h1>--> 
+    <h1>Hello World</h1>
+   
+    <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Quibusdam veniam <b>veritatis</b> iste odio facere. Fugiat, 
+         reprehenderit voluptatibus molestiae nobis necessitatibus minima eius provident,
+         quia unde sit pariatur suscipit ducimus, quod maxime?</p>
+
+         <u1 class="menu">
+            <li>Home</li>
+            <li>About</li> 
+            <li>Contact</li>
+         </u1>
+
+         <script>
+            const elH1 = document.querySelector("h1");
+            console.log(elH1);
+
+            elH1.innerText = "Java script Hello!!!";
+            elH1.innerHTML = "Java <em>script</em> Hello!!!";
+
+            const allH1 = document.querySelectorAll("h1");
+            console.log(allH1);
+
+            const elHome = document.querySelector(".menu li:first-child");
+            console.log(elHome);
+            elHome.innerText = "Ana Sayfa";
+
+            const allLi = document.querySelectorAll(".menu li");
+            console.log(allLi);
+
+            const elDesc = document.querySelector(".desc");
+            console.log(elDesc.innerText); 
+            console.log(elDesc.innerHTML);
+         </script>
+</body>
+</html>
