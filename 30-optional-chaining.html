@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="setUserInfo()">Click me</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      const user1 = {
+        name: "Ali",
+        age: 21,
+        salary: 15000,
+        phone: {
+          gsm: "05111231212",
+          line: "02321142323",
+        },
+      };
+      const user2 = {
+        name: "Ahmet",
+        age: 21,
+      };
+
+      function setUserInfo() {
+        //biz user1 bilgilerine ulasabiliyoruz fakat user2 gibi bazi bilgiler eksikse js error veriyor bunu asmak icin 
+        //optional chaining kullaniyoruz onceden cagirdigimiz eleman varmi dye if() dongusu ile kontrol yapiyorduk
+        //ancak bu yolla kolaylikla yapabiliyoruz!!!
+        const newSalary = user1.salary * 1.15;
+        const phone = user1?.phone?.gsm;
+        console.log(`Sn. ${user1.name} yeni maasiniz $${newSalary} olmustur...`)
+      }
+    </script>
+  </body>
+</html>
