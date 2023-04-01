@@ -10,22 +10,23 @@
     <input type="text" id="txtNumber" />
     <button onclick="calculate()">Update</button>
 
- 
 
-    <h3 id="result"></h3>
 
     <script>
       function calculate() {
-        const num = document.querySelector("#txtNumber").value;
+        let num = document.querySelector("#txtNumber").value;
         let total = 0;
         num = isNaN(num+1) ? 0 : num;
+        num = Math.abs(num);
 
-        while (num>0) {
-          const digit = num % 10;
+        while(num>0) {
+          let digit = num % 10;
           total += digit;
           num = Math.floor(num / 10);
 
         }
+
+        alert(total);
 
       }
     </script>
